@@ -1,13 +1,17 @@
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Message from "../layouts/Message";
-import styles from "./projects.module.css";
+
 import Container from "../layouts/Container";
 import LinkButton from "../layouts/LinkButton";
+import Loading from "../layouts/Loading";
+import Message from "../layouts/Message";
+
+import styles from "./projects.module.css";
 import ProjectCard from "../project/ProjectCard";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
+  const [removeLoading, setRemoveLoading] = useState(false)
 
   const location = useLocation();
   let message = "";
@@ -25,6 +29,7 @@ const Projects = () => {
       .then((resp) => resp.json())
       .then((data) => {
         setProjects(data);
+        setRemoveLoading(true)
       })
       .catch((err) => console.log(err));
   }, []);
@@ -47,6 +52,10 @@ const Projects = () => {
               key={project.id}
             />
           ))}
+          {!removeLoading && <Loading />}
+          {removeLoading && projects.length === 0 &&
+            <p>Não há projeto cadastrados!</p>
+          }
       </Container>
     </div>
   );
