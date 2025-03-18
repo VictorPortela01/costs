@@ -4,6 +4,7 @@ import Footer from "./components/layouts/Footer";
 import Container from "./components/layouts/Container";
 import Home from "./components/pages/Home";
 import Projects from "./components/pages/Projects";
+import Project from "./components/pages/Project";
 import Contact from "./components/pages/Contact";
 import Company from "./components/pages/Company";
 import NewProject from "./components/pages/NewProject";
@@ -52,6 +53,14 @@ const App = () => {
             element={
               <Container customClass="min-height">
                 <NewProject />
+              </Container>
+            }
+          />
+          <Route
+            path="/project/:id"
+            element={
+              <Container customClass="min-height">
+                <Project />
               </Container>
             }
           />
