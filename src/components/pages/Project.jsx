@@ -9,6 +9,7 @@ import Container from "../layouts/Container";
 import Message from "../layouts/Message";
 
 import ServiceForm from "../service/ServiceForm";
+import ServiceCard from "../service/ServiceCard";
 
 import styles from "./Project.module.css";
 import ProjectForm from "../project/ProjectForm";
@@ -17,6 +18,7 @@ const Project = () => {
   const { id } = useParams();
 
   const [project, setProject] = useState([]);
+  const [services, setServices] = useState([]);
   const [showProjectForm, setShowProjectForm] = useState(false);
   const [showServiceForm, setShowServiceForm] = useState(false);
   const [message, setMessage] = useState();
@@ -33,6 +35,7 @@ const Project = () => {
         .then((res) => res.json())
         .then((data) => {
           setProject(data);
+          setServices(data.services);
         })
         .catch((error) => {
           console.error("Error:", error);
@@ -40,7 +43,6 @@ const Project = () => {
     }, [300]);
   }, [id]);
 
-  
   const editPost = (project) => {
     setMessage("");
 
@@ -69,7 +71,7 @@ const Project = () => {
   };
 
   const createService = (project) => {
-    setMessage('')
+    setMessage("");
     // last service
     const lastService = project.services[project.services.length - 1];
     lastService.id = uuidv4();
@@ -79,29 +81,33 @@ const Project = () => {
 
     // maximum value validation
     if (newCost > parseFloat(project.budget)) {
-      setMessage('Orçamento ultrapassado, verifique o valor do serviço');
-      setType('error');
+      setMessage("Orçamento ultrapassado, verifique o valor do serviço");
+      setType("error");
       project.services.pop();
       return false;
     }
 
     // add service cost to project total cost
-    project.cost = newCost
+    project.cost = newCost;
 
     // update project
     fetch(`http://localhost:5000/projects/${project.id}`, {
-      method: 'PATCH',
+      method: "PATCH",
       headers: {
-        'Content-Type' : 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(project)
-    }).then((resp) => resp.json())
+      body: JSON.stringify(project),
+    })
+      .then((resp) => resp.json())
       .then((data) => {
-        //exibir os serviços
-        console.log(data)
+        setShowProjectForm(false)
       })
-    .catch(err => console.log(err))
+      .catch((err) => console.log(err));
   };
+
+  const removeService = () => {
+
+  }
 
   const toggleProjectForm = () => {
     setShowProjectForm(!showProjectForm);
@@ -160,7 +166,17 @@ const Project = () => {
             </div>
             <h2>Serviços</h2>
             <Container customClass="start">
-              <p>Itens de serviços</p>
+              {services.length > 0 && 
+              services.map((service) => (
+                <ServiceCard 
+                id={service.id}
+                name={service.name}
+                cost={service.cost}
+                description={service.description}
+                key={service.id}
+                handleRemove={removeService}/>
+              ))}
+              {services.length === 0 && <p>Não há serviços cadastrados.</p>}
             </Container>
           </Container>
         </div>
