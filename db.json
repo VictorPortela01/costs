@@ -14,13 +14,32 @@
     {
       "id": "d04b",
       "name": "projeto atualizado",
-      "budget": "13000",
+      "budget": "7000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": []
+      "cost": 300,
+      "services": [
+        {
+          "name": "Meu novo serviço",
+          "cost": "100",
+          "description": "Faz isso aqui",
+          "id": "ea13fc12-0ab3-4017-9841-0eedeabd89d0"
+        },
+        {
+          "name": "Meu novo serviço",
+          "cost": "100",
+          "description": "Faz isso aqui",
+          "id": "ea13fc12-0ab3-4017-9841-0eedeabd89d0"
+        },
+        {
+          "name": "Meu novo serviço",
+          "cost": "100",
+          "description": "Faz isso aqui",
+          "id": "1c093237-868a-4090-993b-af99aaeaad97"
+        }
+      ]
     }
   ],
   "categories": [
