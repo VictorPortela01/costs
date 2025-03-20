@@ -6,7 +6,7 @@ import LinkButton from "../layouts/LinkButton";
 import Loading from "../layouts/Loading";
 import Message from "../layouts/Message";
 
-import styles from "./projects.module.css";
+import styles from "./Projects.module.css";
 import ProjectCard from "../project/ProjectCard";
 
 const Projects = () => {
