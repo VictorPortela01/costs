@@ -1,5 +1,65 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "id": "baa2",
+      "name": "Criação de um portfólio ",
+      "budget": "1000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "3b67",
+      "name": "Criação de uma landing page",
+      "budget": "1500",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "30d5",
+      "name": "Infraestrutura de Rede para Escritório",
+      "budget": "15000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 500,
+      "services": [
+        {
+          "name": "Roteadores e switches gerenciáveis",
+          "cost": "500",
+          "description": "Implantação de toda a infraestrutura de rede cabeada e Wi-Fi para um novo escritório com 25 estações de trabalho, incluindo:  Roteadores e switches gerenciáveis; Cabeamento estruturado (CAT6); Ponto de acesso Wi-Fi; Rack de rede Configuração de rede e segurança",
+          "id": "94ab6c28-b7a2-48a8-96b1-fc27ec0567f2"
+        }
+      ]
+    },
+    {
+      "id": "04ef",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "name": "Planejamento de Expansão da Sede",
+      "budget": "8000",
+      "cost": 6000,
+      "services": [
+        {
+          "name": "Criação de um plano estratégico para a expansão da sede da empresa",
+          "cost": "1000",
+          "description": "Levantamento de necessidades estruturais",
+          "id": "c1448ec1-9971-4327-873f-2ad0c139a2cb"
+        }
+        
+      ]
+    }
+  ],
   "categories": [
     {
       "id": "1",
