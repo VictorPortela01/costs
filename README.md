@@ -29,10 +29,10 @@ O **COSTs** é um sistema simples de **gestão de projetos com controle de orça
 ## 📷 Prints do Projeto
 
 > *(Adicione aqui prints ou GIFs do funcionamento das telas principais)*  
-> - Página Inicial  ![alt text](image.png)
-> - Cadastro de Projeto ![alt text](image-1.png)
-> - Detalhes do Projeto  ![alt text](image.png)
-> - Serviços adicionados ![alt text](image-1.png)
+> - ![Tela inicial do projeto](./src/image/Tela_inicial.png)
+> - ![Tela do Projeto](./src/image/Tela_projetos.png)
+> - ![Cadastro de Projeto](./src/image/Criar_projetos.png)
+> - ![Serviços adicionados](./src/image/Servicos_adicionados.png)
 
 ---
 
