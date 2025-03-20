@@ -29,7 +29,7 @@ O **COSTs** é um sistema simples de **gestão de projetos com controle de orça
 ## 🔗 Deploy
 
 Você pode acessar a versão online do projeto clicando no link abaixo:  
-👉 [https://costs.vercel.app]([https://costs.vercel.app](https://costs-delta-nine.vercel.app/projects))
+👉 [[https://costs.vercel.app](https://costs-delta-nine.vercel.app/projects)]
 
 ⚠️ **Observação**: O backend (JSON Server) foi utilizado localmente apenas para fins de simulação. Por isso, no deploy, os dados dinâmicos não estão sendo carregados.  
 No entanto, o funcionamento completo pode ser visualizado pelas imagens abaixo ou ao rodar localmente.
