@@ -1,13 +1,13 @@
 import React from "react";
-import Navbar from "./components/layouts/Navbar";
-import Footer from "./components/layouts/Footer";
-import Container from "./components/layouts/Container";
-import Home from "./components/pages/Home";
-import Projects from "./components/pages/Projects";
-import Project from "./components/pages/Project";
-import Contact from "./components/pages/Contact";
-import Company from "./components/pages/Company";
-import NewProject from "./components/pages/NewProject";
+import Navbar from "./components/layouts/Navbar.jsx";
+import Footer from "./components/layouts/Footer.jsx";
+import Container from "./components/layouts/Container.jsx";
+import Home from "./components/pages/Home.jsx";
+import Projects from "./components/pages/Projects.jsx";
+import Project from "./components/pages/Project.jsx";
+import Contact from "./components/pages/Contact.jsx";
+import Company from "./components/pages/Company.jsx";
+import NewProject from "./components/pages/NewProject.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {

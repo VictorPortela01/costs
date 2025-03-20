@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 
 import Input from "../form/Input.jsx";
 import styles from "./ProjectForm.module.css";
-import Select from "../form/Select";
-import SubmitButton from "../form/SubmitButton";
+import Select from "../form/Select.jsx";
+import SubmitButton from "../form/SubmitButton.jsx";
 
 const ProjectForm = ({ handleSubmit, btnText, projectData }) => {
   const [categories, setCategories] = useState([]);

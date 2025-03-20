@@ -4,15 +4,15 @@ import { parse, v4 as uuidv4 } from "uuid";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import Loading from "../layouts/Loading";
-import Container from "../layouts/Container";
-import Message from "../layouts/Message";
+import Loading from "../layouts/Loading.jsx";
+import Container from "../layouts/Container.jsx";
+import Message from "../layouts/Message.jsx";
 
 import ServiceForm from "../service/ServiceForm";
 import ServiceCard from "../service/ServiceCard";
 
 import styles from "./Project.module.css";
-import ProjectForm from "../project/ProjectForm";
+import ProjectForm from "../project/ProjectForm.jsx";
 
 const Project = () => {
   const { id } = useParams();

@@ -1,13 +1,13 @@
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import Container from "../layouts/Container";
-import LinkButton from "../layouts/LinkButton";
-import Loading from "../layouts/Loading";
-import Message from "../layouts/Message";
+import Container from "../layouts/Container.jsx";
+import LinkButton from "../layouts/LinkButton.jsx";
+import Loading from "../layouts/Loading.jsx";
+import Message from "../layouts/Message.jsx";
 
 import styles from "./Projects.module.css";
-import ProjectCard from "../project/ProjectCard";
+import ProjectCard from "../project/ProjectCard.jsx";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
